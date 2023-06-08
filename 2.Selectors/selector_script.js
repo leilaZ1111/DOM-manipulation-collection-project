@@ -90,3 +90,13 @@ for (let i = 0; i < p.length; i++) {
 
 //     // Apply the random RGB color
 //     paragraph.style.color = `rgb(${red}, ${green}, ${blue})`;
+
+
+// ou bien
+
+//     const red = 1 + Math.floor(Math.random() * 255); // valeur entre 1 inclu et 255 (pas de noir)
+//     const green = 1 + Math.floor(Math.random() * 255);
+//     const blue = 1 + Math.floor(Math.random() * 255);
+
+//     // Apply the random RGB color
+//     paragraph.style.color = `rgb(${red}, ${green}, ${blue})`;
