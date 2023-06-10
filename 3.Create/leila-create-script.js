@@ -20,7 +20,7 @@ let array = ["Venus", "Sirius", "Andromede", "Arcturus", "Vega", "Zeta","Orion",
 function createSectionWithParagraphs(array) { // Create a new HTML section element
 shuffleArray(array); // shffle throught it
 
-  let section = document.createElement("section");
+  let section = document.createElement("section"); 
 
   for (let i = 0; i < array.length; i++) { // Iterate over the array elements
     let paragraph = document.createElement("p");  // Create a new paragraph element
