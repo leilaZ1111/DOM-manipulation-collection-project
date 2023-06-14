@@ -1,3 +1,5 @@
+// Bellow is my array of objects :
+
 const collection = [
   {
     saga: "Harry Potter - vol. 1 of 7",
@@ -145,34 +147,25 @@ const collection = [
   },
 ];
 
-/////////////////////////// ONE OBJECT ///////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
 
-// const collection = [
-//   {
-//     saga: "Harry Potter #1",
-//     title: "Harry Potter and the Philosopher’s Stone",
-//     author: "J.K. Rowling",
-//     release_year: 1997,
-//     summary:
-//       "Harry Potter, raised by his miserable aunt and uncle, is unaware of his fame or magical abilities. His life takes a dramatic turn when he is invited to a renowned wizarding school, uncovering clues about his extraordinary heritage. From encounters with a friendly giant to an enchanting school environment, Harry is thrust into a hidden world, discovering his true destiny.",
-//     genre: ["Fantasy - Magic - Young Adult"],
-//     picture:
-//       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598823299i/42844155.jpg",
-//   },
-// ];
 
-////////////////////////////////////////////////////////////////
+document.body.style.fontFamily = "'Open Sans', sans-serif"; // il a fallut insérer le lien de la font dans l'HTML
 
-document.body.style.fontFamily = "'Open Sans', sans-serif";
+const container = document.getElementById("container"); // J'ai créé la div DANS mon html avec un ID. Cette div contiendra toute ce qui suit et sera créé depuis JS avec document.createElement, suivi de .append et de .innerText. Avec cette ligne de code, je demande à JS d'aller chercher cette div de mon html qui va contenir le container de mon header + cardCollection + footer
 
-const container = document.getElementById("container"); // J'ai créé la div DANS mon html avec un ID. Cette div contiendra toute la suite que je crée depuis JS avec document.createElement
+///////////////////////////////////////////////////////////////////////////////////////////
 
-let header = document.createElement("div");
-let headerTitle = document.createElement("h1");
+let header = document.createElement("div"); // création des div et éléments pour header
+let headerTitle = document.createElement("h1"); // création des div et éléments pour header
 
-let footer = document.createElement("div");
-let footerParagraph = document.createElement("p");
+let footer = document.createElement("div"); // création des div et éléments pour footer
+let footerParagraph = document.createElement("p"); // création des div et éléments pour footer
 
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Dans cette section est défini le style pour mon header :
 headerTitle.style.textAlign = "center";
 headerTitle.style.padding = "30px";
 headerTitle.style.paddingBottom = "0";
@@ -182,49 +175,45 @@ header.append(headerTitle);
 container.append(header);
 
 ////////////////////////////////////////////////////////////////
-let cardCollection = document.createElement("div");
 
-// for LOOP :
+let cardCollection = document.createElement("div"); // création de ma div cardCollection (l'ensemble de toutes mes cartes entre header et footer)
+
+// En dessous se trouve mon for LOOP :   ////////// Dans ce LOOP se trouve toute la partie style qui affecte la mainCard. La mainCard est le template à travers lequel sera formaté chaque objet de mon array. La {} commence à la ligne 183 jusqu'à 282. Au delà, le style s'applique à la grande div de ma cardCollection et du footer qui ne doivent pas être inclu dans le LOOP évidemment.
+
 for (let i = 0; i < collection.length; i++) {
   console.log(collection[i].author);
 
-  // }
-
-  // forEach LOOP :
-
-  // collection.forEach((book) => {
-  //  forEach LOOP !!!! Demander à Diogo de réexpliquer !!!!!
 
   let mainCard = document.createElement("div"); // création d'une cardContainer
 
-  let topPictureDiv = document.createElement("div"); // création des div et éléments pour chaque card
-  let image = document.createElement("img");
+  let topPictureDiv = document.createElement("div"); // création d'un div pour contenir mon image
+  let image = document.createElement("img"); // création d'un élément image
 
-  let tagsDiv = document.createElement("div"); // création des div et éléments pour chaque card
-  let yearTag = document.createElement("div"); // création des div et éléments pour chaque card
-  let genreTag = document.createElement("div"); // création des div et éléments pour chaque card
+  let tagsDiv = document.createElement("div"); // création des div pour mes tags "year" et "genre"
+  let yearTag = document.createElement("div"); // création des div pour le tag year
+  let genreTag = document.createElement("div"); // création des div pour le tag genre
 
   let bottomDiv = document.createElement("div"); // pour contenir les titres et summary
 
-  let topTitle = document.createElement("h2"); // création des div et éléments pour chaque card
+  let topTitle = document.createElement("h2"); // création d'un h2 pour la partie "saga" de mes objets
 
-  let mainTitle = document.createElement("h1"); // création des div et éléments pour chaque card
+  let mainTitle = document.createElement("h1"); // création d'un h1 pour la partie "title" de mes objets
 
-  let subTitle = document.createElement("h2"); // création des div et éléments pour chaque card
+  let subTitle = document.createElement("h2"); // création d'un h2 pour la partie "author" de mes objets
 
-  let paragraph = document.createElement("p"); // création des div et éléments pour chaque card
+  let paragraph = document.createElement("p"); // création d'un h2 pour la partie "summary" de mes objets
 
-  image.src = collection[i].picture;
+  image.src = collection[i].picture; // le lien vers l'image de mes objets
   image.style.height = "300px";
   image.style.margin = "0 auto";
   image.borderRadius = "15px";
 
-  topPictureDiv.style.display = "flex";
+  topPictureDiv.style.display = "flex";  // flex pour la div picture et l'image qu'elle contient suivit du style
   topPictureDiv.style.justifyContent = "center";
   topPictureDiv.append(image);
   mainCard.append(topPictureDiv);
 
-  // tags
+  // style pour les tags year et genre
 
   tagsDiv.style.display = "flex";
   tagsDiv.style.justifyContent = "center";
@@ -250,7 +239,7 @@ for (let i = 0; i < collection.length; i++) {
   tagsDiv.append(genreTag);
   mainCard.append(tagsDiv);
 
-  // titles
+  // style pour les titles
   topTitle.style.margin = "0";
   topTitle.style.color = "#858585";
   topTitle.style.fontSize = "20px"
@@ -268,12 +257,12 @@ for (let i = 0; i < collection.length; i++) {
   subTitle.innerText = collection[i].author;
   mainCard.append(subTitle);
 
-  // summary
+  // style pour summary
   paragraph.style.fontFamily = "Open Sans";
   paragraph.innerText = collection[i].summary;
   mainCard.append(paragraph);
 
-  // bottomDiv
+  // style, enfin juste un padding, pour la bottomDiv qui contient le h1, les h2 et le summary
   bottomDiv.style.padding = "15px";
   bottomDiv.append(topTitle);
   bottomDiv.append(mainTitle);
@@ -281,7 +270,7 @@ for (let i = 0; i < collection.length; i++) {
   bottomDiv.append(paragraph);
   mainCard.append(bottomDiv);
 
-  // mainCard
+  // style pour la mainCard
 
   mainCard.style.paddingTop = "20px";
   mainCard.style.width = "380px";
@@ -292,6 +281,10 @@ for (let i = 0; i < collection.length; i++) {
   cardCollection.append(mainCard);
 }
 
+////////////////////////////////////////////////////////////:
+
+// A partir d'ici on est plus dans la boucle, le style s'applique à la cardCollection qui est l'ensemble de toutes mes cartes
+
 cardCollection.style.display = "flex";
 cardCollection.style.flexDirection = "row";
 cardCollection.style.justifyContent = "space-evenly";
@@ -300,7 +293,9 @@ cardCollection.style.rowGap = "60px";
 cardCollection.style.padding = "50px";
 container.style.backgroundColor = "#F2E2CF";
 
-///////////////////////////////////////////////////////////////:
+///////////////////////////////////////////////////////////////
+
+// Style pour le footer  :
 
 footerParagraph.style.color = "#858585",
 footerParagraph.style.padding = "30px";
