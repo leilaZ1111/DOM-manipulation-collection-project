@@ -2,7 +2,7 @@
 
 const collection = [
   {
-    saga: "Harry Potter - vol. 1 of 7",
+    saga: "Harry Potter - Book 1 of 7",
     title: "Harry Potter and the Philosopher’s Stone",
     author: "J.K. Rowling",
     release_year: 1997,
@@ -14,7 +14,7 @@ const collection = [
   },
 
   {
-    saga: " Dune - vol. 1 of 8",
+    saga: " Dune - Book 1 of 8",
     title: "Dune",
     author: "Frank Herbert",
     release_year: 1965,
@@ -26,7 +26,7 @@ const collection = [
   },
 
   {
-    saga: "The Lord of the Rings - vol. 0 of 3",
+    saga: "The Lord of the Rings - Book 0 of 3",
     title: "The Hobbit",
     author: "J.R.R. Tolkien",
     release_year: 1937,
@@ -38,7 +38,7 @@ const collection = [
   },
 
   {
-    saga: "The Lord of the Rings - vol. 1 of 3",
+    saga: "The Lord of the Rings - Book 1 of 3",
     title: "The Hobbit",
     author: "J.R.R. Tolkien",
     release_year: 1955,
@@ -50,7 +50,7 @@ const collection = [
   },
 
   {
-    saga: "The Kingkiller Chronicle - vol. 1 of 3",
+    saga: "The Kingkiller Chronicle - Book 1 of 3 - Expecting a Third One",
     title: "The Name of the Wind",
     author: "Patrick Rothfuss",
     release_year: 2007,
@@ -62,7 +62,7 @@ const collection = [
   },
 
   {
-    saga: "The Mistborn - vol. 1 of 3",
+    saga: "The Mistborn - Book 1 of 3",
     title: "The Final Empire",
     author: "Brandon Sanderson",
     release_year: 2006,
@@ -75,7 +75,7 @@ const collection = [
   },
 
   {
-    saga: "Shards of a Shattered Mirror - vol. 1 of 2",
+    saga: "Shards of a Shattered Mirror - Book 1 of 2 - Expecting a Third One",
     title: "Cryptic",
     author: "Darryl Anka",
     release_year: 2017,
@@ -151,6 +151,9 @@ const collection = [
 
 
 document.body.style.fontFamily = "'Open Sans', sans-serif"; // il a fallut insérer le lien de la font dans l'HTML
+document.body.style.margin = "0px";
+document.body.style.padding = "0px";
+document.body.style.backgroundColor = "#F2E2CF";
 
 const container = document.getElementById("container"); // J'ai créé la div DANS mon html avec un ID. Cette div contiendra toute ce qui suit et sera créé depuis JS avec document.createElement, suivi de .append et de .innerText. Avec cette ligne de code, je demande à JS d'aller chercher cette div de mon html qui va contenir le container de mon header + cardCollection + footer
 
@@ -168,8 +171,8 @@ let footerParagraph = document.createElement("p"); // création des div et élé
 // Dans cette section est défini le style pour mon header :
 headerTitle.style.textAlign = "center";
 headerTitle.style.padding = "30px";
-headerTitle.style.paddingBottom = "0";
-headerTitle.style.marginBottom = "0";
+headerTitle.style.paddingBottom = "0px";
+headerTitle.style.marginBottom = "0px";
 headerTitle.textContent = "A Collection of Fantastic Books and Wondrous Adventures";
 header.append(headerTitle);
 container.append(header);
