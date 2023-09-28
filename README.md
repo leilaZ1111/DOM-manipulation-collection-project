@@ -5,7 +5,7 @@
 
 ## Description
 
-This repository contains a series of beginners exercises destined to practice DOM manipulation. The most interesting among them was the exercise in the folder `3.Collection`, where I created a collection of book cards using JavaScript.
+This repository contains a series of beginners exercises (in my second month of learning coding) destined to practice DOM manipulation. The most interesting among them was the exercise in the folder `3.Collection`, where I created a collection of book cards using JavaScript.
 
 The goal was to gather a collection of items, here a list of books, and create cards with relevant information, such as title, author, year of publication, genre, etc, forming an array of objects. The exercise required me to populate the cards using JavaScript **without using CSS for styling**.
 
