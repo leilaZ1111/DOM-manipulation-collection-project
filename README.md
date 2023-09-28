@@ -3,13 +3,11 @@
 - `Type of Challenge`: learning DOM Manipulation
 - `Netlify deployment:` [Visit Now](https://fantastic-book-collection.netlify.app/)
 
+## Description
+
 This repository contains a series of beginners exercises destined to practice DOM manipulation. The most interesting among them was the exercise in the folder `3.Collection`, where I created a collection of book cards using JavaScript.
 
-The goal was to gather a list of books and create cards for each book with relevant information. The exercise required me to populate the cards using JavaScript **without using CSS for styling**.
-
-## Challenge Description
-
-The challenge was to create a collection of items based on a chosen topic. I chose "Books" as my topic and proceeded to create a list of 12 Fantasy books. For each book, I gathered relevant information to create cards, including 7 properties per book, such as title, author, year of publication, genre, etc, forming an array of objects. I was then able to create a card for each book using JavaScript and populated the cards with the relevant information.
+The goal was to gather a collection of items, here a list of books, and create cards with relevant information, such as title, author, year of publication, genre, etc, forming an array of objects. The exercise required me to populate the cards using JavaScript **without using CSS for styling**.
 
 ## Learning Focus: DOM Manipulation
 
