@@ -1,17 +1,17 @@
 # My Book Collection Exercise
 
-- `Type of Challenge`: learning DOM Manipulation
+- `Repository:` [DOM-manipulation-collection-project](https://github.com/leilaZ1111/DOM-manipulation-collection-project)
 - `Netlify deployment:` [Visit Now](https://fantastic-book-collection.netlify.app/)
 
 ## Description
 
 This repository contains a series of beginners exercises (in my second month of learning coding) destined to practice DOM manipulation. The most interesting among them was the exercise in the folder `3.Collection`, where I created a collection of book cards using JavaScript.
 
-The goal was to gather a collection of items, here a list of books, and create cards with relevant information, such as title, author, year of publication, genre, etc, forming an array of objects. The exercise required me to populate the cards using JavaScript **without using CSS for styling**.
+## Learning objectives of this project: DOM Manipulation
 
-## Learning Focus: DOM Manipulation
+Our first instruction was to gather a collection of items, here a list of books, and create cards with relevant information, such as title, author, year of publication, genre, etc, forming an array of objects. The exercise, then required me to populate the cards using JavaScript **without using CSS for styling**.
 
-One of the primary objectives of this exercise was to learn and practice DOM manipulation using JavaScript. By dynamically generating and updating the HTML content of the page, I gained a better understanding of how to interact with and modify the structure and content of web pages using JavaScript.
+The goal of this exercise was to learn and practice DOM manipulation using JavaScript. By dynamically generating and updating the HTML content of the page, I gained a better understanding of how to interact with and modify the structure and content of web pages using JavaScript.
 
 ## ⚙️ Technologies
 
